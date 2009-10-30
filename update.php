@@ -1,2 +1,3 @@
 <?php
-echo exec('git pull');
+exec('git pull', $result);
+echo $result;
