@@ -6,5 +6,5 @@ define('TIME', time());
 function __autoload($clsname)
 {
 	$clsname = str_replace('_', '/', $clsname);
-	require_once $clsname;
+	require_once $clsname . '.php';
 }
