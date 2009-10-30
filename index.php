@@ -1,4 +1,5 @@
 <?php
 require_once 'config.php';
 
-echo 'hello world!';
+$req = new cls_request();
+$req->dispatch();
