@@ -3,7 +3,7 @@ class cls_request
 {
 	public function dispatch()
 	{
-		sleep(1000);
+		sleep(1);
 		echo 'hello world';
 	}
 }
