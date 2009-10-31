@@ -18,12 +18,12 @@ class cls_request
 
 		if (empty($dirs['dirname']))
 		{
-			$dirs['dirname'] = 'index';
+			$dirs['dirname'] = 'default';
 		}
 
 		if (empty($dirs['filename']))
 		{
-			$dirs['filename'] = 'default';
+			$dirs['filename'] = 'index';
 		}
 		
 		$controller = 'controller_' . str_replace('/', '_', $dirs['dirname']);
