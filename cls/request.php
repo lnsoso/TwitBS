@@ -29,10 +29,9 @@ class cls_request
 		$controller = 'controller_' . str_replace('/', '_', $dirs['dirname']);
 		$method = $dirs['filename'];
 
-		// $controller = new $controller();
-		// $controller->$method();
+		$controller = new $controller();
+		$controller->$method();
 
 		var_dump($uri, $dirs, $controller, $method);
-		// require_once $controller . '.php';
 	}
 }
