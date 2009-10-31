@@ -32,6 +32,10 @@ class cls_request
 		$controller = new $controller();
 		$controller->$method();
 
-		var_dump($uri, $dirs, $controller, $method);
+		if (DEBUG)
+		{
+			echo '<br />';
+			var_dump($uri, $dirs, $controller, $method);
+		}
 	}
 }
