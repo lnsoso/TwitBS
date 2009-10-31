@@ -15,6 +15,17 @@ class cls_request
 		
 		$uri = parse_url($_SERVER['REQUEST_URI']);
 		$dirs = pathinfo(trim($uri['path'], '/'));
+
+		if (empty($dirs['dirname']))
+		{
+			$dirs['dirname'] = 'index';
+		}
+
+		if (empty($dirs['filename']))
+		{
+			$dirs['filename'] = 'default';
+		}
+		
 		$controller = 'controller_' . str_replace('/', '_', $dirs['dirname']);
 		$method = $dirs['filename'];
 
