@@ -12,6 +12,7 @@ class cls_request
 		}
 		
 		$uri = parse_url($_SERVER['REQUEST_URI']);
-		var_dump($uri);
+		$dirs = explode('/', trim($uri['path']));
+		var_dump($dirs);
 	}
 }
