@@ -34,8 +34,10 @@ class cls_request
 
 		if (DEBUG)
 		{
-			echo '[DEBUG]';
-			var_dump($uri, $dirs, $controller, $method);
+			$_GLOBAL['debug']->dump('[URI]', $uri);
+			$_GLOBAL['debug']->dump('[DIRS]', $dirs);
+			$_GLOBAL['debug']->dump('[CONTROLLER]', $controller);
+			$_GLOBAL['debug']->dump('[METHOD]', $method);
 		}
 	}
 }
