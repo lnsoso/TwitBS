@@ -31,14 +31,5 @@ class cls_request
 
 		$controller = new $controller();
 		$controller->$method();
-
-		if (DEBUG)
-		{
-			global $debug;
-			$debug->dump('[URI]', $uri);
-			$debug->dump('[DIRS]', $dirs);
-			$debug->dump('[CONTROLLER]', $controller);
-			$debug->dump('[METHOD]', $method);
-		}
 	}
 }
