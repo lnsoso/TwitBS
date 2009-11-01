@@ -14,6 +14,6 @@ class controller_default
 		{
 			echo '[GIT] ' . $r . '<br />';
 		}
-		echo '[GIT] pulling finish';
+		echo '[GIT] pulling finish<br />';
 	}
 }

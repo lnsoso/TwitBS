@@ -6,4 +6,11 @@ class cls_debug
 		echo $msg;
 		echo time()-(float)$time;
 	}
+	
+	public function dump($msg, $value)
+	{
+		echo $msg;
+		var_dump($value);
+		echo "<br />"
+	}
 }
