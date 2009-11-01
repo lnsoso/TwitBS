@@ -8,12 +8,12 @@ class controller_default
 	
 	public function update()
 	{
-		echo 'git pull<br />';
+		echo '[GIT] pulling ...<br />';
 		exec('/home/vtwoexpc/bin/git pull', $result);
 		foreach($result as $r)
 		{
-			echo $r . "<br />";
+			echo '[GIT] ' . $r . '<br />';
 		}
-		echo 'git finish';
+		echo '[GIT] pulling finish';
 	}
 }
