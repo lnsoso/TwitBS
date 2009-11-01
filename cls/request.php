@@ -34,7 +34,7 @@ class cls_request
 
 		if (DEBUG)
 		{
-			echo '<br />';
+			echo '[DEBUG]';
 			var_dump($uri, $dirs, $controller, $method);
 		}
 	}
