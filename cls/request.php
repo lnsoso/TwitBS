@@ -34,6 +34,7 @@ class cls_request
 
 		if (DEBUG)
 		{
+			global $debug;
 			$debug->dump('[URI]', $uri);
 			$debug->dump('[DIRS]', $dirs);
 			$debug->dump('[CONTROLLER]', $controller);
