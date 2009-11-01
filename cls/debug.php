@@ -11,6 +11,6 @@ class cls_debug
 	{
 		echo $msg;
 		var_dump($value);
-		echo "<br />"
+		echo "<br />";
 	}
 }
