@@ -7,5 +7,5 @@ $req->dispatch();
 if (defined('DEBUG') && DEBUG)
 {
 	$debug = new cls_debug();
-	$debug->cost_time('<br />total runtime:', TIME);
+	$debug->cost_time('<br />[TIME] total runtime : ', TIME);
 }
