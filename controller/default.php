@@ -16,4 +16,14 @@ class controller_default
 		}
 		echo '[GIT] pulling finish<br />';
 	}
+	
+	public function login()
+	{
+		echo 'do login';
+	}
+	
+	public function logout()
+	{
+		echo "do logout";
+	}
 }

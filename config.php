@@ -11,6 +11,12 @@ if (DEBUG)
 
 function __autoload($clsname)
 {
-	$clsname = str_replace('_', '/', $clsname);
-	require_once $clsname . '.php';
+	$clsname = str_replace('_', '/', $clsname . '.php');
+	
+	if (!file_exists($clsname))
+	{
+		die('no such file: ' . $clsname);
+	}
+	
+	require_once $clsname;
 }

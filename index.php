@@ -6,6 +6,6 @@ $req->dispatch();
 
 if (defined('DEBUG') && DEBUG)
 {
-	$debug = new cls_debug();
+	$debug = cls_debug::singleton();
 	$debug->cost_time('<br />[TIME] total runtime : ', TIME);
 }
