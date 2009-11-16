@@ -1,4 +1,6 @@
-<?php //vim: foldmethod=marker
+<?php
+die();
+//vim: foldmethod=marker
 //require_once("OAuth.php");
 
 class TestOAuthServer extends OAuthServer {
