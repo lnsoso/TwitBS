@@ -15,7 +15,7 @@ class controller_oauth
 		/* Start session and load lib */
 		session_start();
 		require_once '3rd/oauth_twitter.php';
-
+		
 		/* If the oauth_token is old redirect to the connect page. */
 		if (isset($_REQUEST['oauth_token']) && !empty($_SESSION['oauth_token']) && $_SESSION['oauth_token'] !== $_REQUEST['oauth_token'])
 		{
@@ -25,7 +25,7 @@ class controller_oauth
 		}
 
 		/* Create TwitteroAuth object with app key/secret and token key/secret from default phase */
-		$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION['oauth_token'], $_SESSION['oauth_token_secret']);
+		$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET); // , $_SESSION['oauth_token'], $_SESSION['oauth_token_secret']
 
 		/* Request access tokens from twitter */
 		$access_token = $connection->getAccessToken($_REQUEST['oauth_verifier']);
