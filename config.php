@@ -1,7 +1,7 @@
 <?php
 define('CACHE', true);
 define('DEBUG', true);
-define('TIME', time());
+define('TIME', empty($_SERVER[’REQUEST_TIME’]) ? time() : $_SERVER[’REQUEST_TIME’]);
 
 if (DEBUG)
 {
