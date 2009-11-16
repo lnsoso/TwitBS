@@ -17,7 +17,7 @@ class controller_oauth
 		require_once '3rd/oauth_twitter.php';
 
 		/* If the oauth_token is old redirect to the connect page. */
-		if (isset($_REQUEST['oauth_token']) && $_SESSION['oauth_token'] !== $_REQUEST['oauth_token'])
+		if (isset($_REQUEST['oauth_token']) && !empty($_SESSION['oauth_token']) && $_SESSION['oauth_token'] !== $_REQUEST['oauth_token'])
 		{
 			$_SESSION['oauth_status'] = 'oldtoken';
 			$this->signout();
@@ -80,7 +80,10 @@ class controller_oauth
 	
 	public function signout()
 	{
-		session_start();
+		if (empty($_SESSION))
+		{
+			session_start();
+		}
 		session_destroy();
 	}
 }
