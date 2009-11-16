@@ -1,4 +1,5 @@
 <?php
+die();
 // class controller_oauth
 // {
 // 	public function index()
