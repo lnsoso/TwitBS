@@ -19,6 +19,7 @@ class controller_default
 	
 	public function test()
 	{
+		require_once '3rd/oauth_twitter.php';
 		/* Create TwitterOAuth object and get request token */
 		$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
 
