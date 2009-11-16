@@ -2,7 +2,7 @@
 /**
  * authorize class
  */
-class controller_auth
+class controller_oauth
 {
 	public function callback()
 	{
