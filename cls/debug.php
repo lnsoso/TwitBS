@@ -5,7 +5,7 @@ class cls_debug
 	
 	public function singleton()
 	{
-		if (empty(cls_debug::singleton))
+		if (empty(cls_debug::$singleton))
 		{
 			cls_debug::$singleton = new __self__();
 		}
