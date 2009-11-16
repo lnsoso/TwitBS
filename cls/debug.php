@@ -7,7 +7,7 @@ class cls_debug
 	{
 		if (empty(cls_debug::$singleton))
 		{
-			cls_debug::$singleton = new __self__();
+			cls_debug::$singleton = new cls_debug();
 		}
 		
 		return cls_debug::$singleton;
