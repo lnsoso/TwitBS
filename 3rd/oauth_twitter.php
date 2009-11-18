@@ -15,7 +15,7 @@ require_once('oauth.php');
 
 define("CONSUMER_KEY", "MNbxy4wnhFkuWTlOg8FH7g");
 define("CONSUMER_SECRET", "uU8yTxq3hxLE6WK0eDBiRhm4by6OWsw7M2TQdihUZc");
-define("OAUTH_CALLBACK", "http://twitbs.tito.cc/oauth/callback");
+define("OAUTH_CALLBACK", "http://twitbs.tito.cc/oauth/callback/");
 
 /**
  * Twitter OAuth class
