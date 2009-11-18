@@ -17,12 +17,15 @@ class controller_oauth
 		require_once '3rd/oauth_twitter.php';
 		
 		/* If the oauth_token is old redirect to the connect page. */
-		if (isset($_REQUEST['oauth_token']) && (empty($_SESSION['oauth_token']) || $_SESSION['oauth_token'] !== $_REQUEST['oauth_token']))
+		if (isset($_REQUEST['oauth_token']) && empty($_SESSION['oauth_token']) && $_SESSION['oauth_token'] !== $_REQUEST['oauth_token'])
 		{
 			$_SESSION['oauth_status'] = 'oldtoken';
 			$this->signout();
 			$this->signup();
 		}
+
+		$_SESSION['oauth_token'] = $_REQUEST['oauth_token'];
+		$_SESSION['oauth_verifier'] = $_REQUEST['oauth_verifier'];
 
 		/* Create TwitteroAuth object with app key/secret and token key/secret from default phase */
 		$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET); // , $_SESSION['oauth_token'], $_SESSION['oauth_token_secret']
@@ -63,7 +66,7 @@ class controller_oauth
 		/* Save request token to session */
 		$_SESSION['oauth_token'] = $token = $request_token['oauth_token'];
 		$_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
-
+		var_dump($_SESSION, '123');die();
 		/* If last connection fails don't display authorization link */
 		switch ($connection->http_code)
 		{
