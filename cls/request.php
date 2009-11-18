@@ -28,8 +28,13 @@ class cls_request
 		
 		$controller = 'controller_' . str_replace('/', '_', $dirs['dirname']);
 		$method = $dirs['filename'];
-
 		$controller = new $controller();
+		
+		if (!method_exists($controller, $method))
+		{
+			die('no such method: ' . $method);
+		}
+		
 		$controller->$method();
 	}
 }

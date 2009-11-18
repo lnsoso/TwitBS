@@ -21,7 +21,7 @@ class controller_oauth
 		{
 			$_SESSION['oauth_status'] = 'oldtoken';
 			$this->signout();
-			$this->signin();
+			$this->signup();
 		}
 
 		/* Create TwitteroAuth object with app key/secret and token key/secret from default phase */
